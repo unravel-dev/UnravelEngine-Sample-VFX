@@ -1,0 +1,187 @@
+/*
+ * Spell Arena HUD. Dark glass panels over the game; each spell brings its own accent colour
+ * through the data model (data-style-color / data-style-border-color).
+ * RCSS reminders: lengths in dp, colours with alpha as #rrggbbaa, borders take no style keyword.
+ */
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Inter;
+	font-size: 16dp;
+	color: #e8e4f4;
+	background-color: rgba(0, 0, 0, 0);
+	pointer-events: none;
+}
+
+.panel {
+	position: absolute;
+	box-sizing: border-box;
+	padding: 14dp 18dp;
+	background-color: #0b0a14c8;
+	border: 1dp #ffffff26;
+	border-radius: 8dp;
+}
+
+/* ---------- title ---------- */
+
+#title {
+	top: 24dp;
+	left: 24dp;
+}
+
+.heading {
+	font-size: 30dp;
+	font-weight: bold;
+	color: #f4e9ff;
+}
+
+.subheading {
+	font-size: 14dp;
+	color: #a79fc4;
+}
+
+/* ---------- live count and switches ---------- */
+
+#stats {
+	top: 24dp;
+	right: 24dp;
+	width: 300dp;
+}
+
+.count {
+	font-size: 40dp;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: right;
+}
+
+.count-label {
+	font-size: 13dp;
+	color: #a79fc4;
+	text-align: right;
+	margin-bottom: 10dp;
+}
+
+.switch {
+	display: block;
+	height: 26dp;
+	line-height: 26dp;
+	color: #8d86a8;
+}
+
+.switch.on {
+	color: #ffffff;
+}
+
+.switch .label {
+	margin-left: 10dp;
+}
+
+.switch .state {
+	float: right;
+	font-weight: bold;
+}
+
+.switch.on .state {
+	color: #ffd77a;
+}
+
+.key {
+	display: inline-block;
+	width: 22dp;
+	height: 22dp;
+	line-height: 22dp;
+	text-align: center;
+	font-size: 13dp;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #ffffff1c;
+	border: 1dp #ffffff40;
+	border-radius: 4dp;
+}
+
+.key.wide {
+	width: 92dp;
+	margin-right: 10dp;
+}
+
+/* ---------- controls ---------- */
+
+#controls {
+	bottom: 24dp;
+	left: 24dp;
+}
+
+.control {
+	display: block;
+	height: 28dp;
+	line-height: 28dp;
+	font-size: 14dp;
+	color: #c9c2e0;
+}
+
+/* ---------- spell bar ---------- */
+
+#spellbook {
+	position: absolute;
+	bottom: 24dp;
+	left: 0dp;
+	right: 0dp;
+	text-align: center;
+}
+
+#details {
+	position: relative;
+	display: inline-block;
+	width: 560dp;
+	margin-bottom: 12dp;
+	text-align: center;
+}
+
+.spell-name {
+	font-size: 24dp;
+	font-weight: bold;
+}
+
+.spell-description {
+	font-size: 15dp;
+	color: #c9c2e0;
+}
+
+#bar {
+	display: block;
+}
+
+.slot {
+	display: inline-block;
+	width: 132dp;
+	height: 64dp;
+	margin: 0dp 5dp;
+	padding-top: 8dp;
+	box-sizing: border-box;
+	background-color: #0b0a14b4;
+	border: 2dp #ffffff30;
+	border-radius: 8dp;
+	text-align: center;
+}
+
+.slot.selected {
+	background-color: #241c3ce6;
+}
+
+.slot-key {
+	font-size: 20dp;
+	font-weight: bold;
+}
+
+.slot-name {
+	font-size: 14dp;
+	color: #d8d2ea;
+}

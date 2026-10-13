@@ -1,0 +1,3566 @@
+{
+ "statements": {
+  "overrides": [],
+  "removed_entities": [],
+  "removed_instances": []
+ },
+ "entities": [
+  {
+   "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+   "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystals",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "nil",
+      "uid": "nil"
+     },
+     "children": [
+      {
+       "prefab_uid": "cec6db92-698f-344e-961d-c419302517cd",
+       "uid": "ce59a5d6-f23f-4445-aafa-1919b80e8dd4"
+      },
+      {
+       "prefab_uid": "881b7948-c772-4941-86a8-53e39af8e652",
+       "uid": "b088ff76-3697-0c49-944a-957910155a77"
+      },
+      {
+       "prefab_uid": "a2675e16-b404-e541-bcb0-603f76d3314d",
+       "uid": "0c7479c5-9c4d-c34c-b3df-0defc6eb1db7"
+      },
+      {
+       "prefab_uid": "3f5159eb-7506-0b4f-aeb8-c9f7494fbb61",
+       "uid": "838b4d8e-72d3-ec45-9499-0fba166bee9f"
+      },
+      {
+       "prefab_uid": "b43f008d-27fe-4645-aa57-6d57b612e086",
+       "uid": "a8b34dd0-7d88-bc4e-986a-1e4ef8c24b9d"
+      },
+      {
+       "prefab_uid": "bf0affde-574e-7a49-bfbd-2cbc0db24d83",
+       "uid": "11ec870e-02e0-1a4b-9141-396ecf741203"
+      },
+      {
+       "prefab_uid": "6f9b702f-5023-764b-bb2b-5cae9f506673",
+       "uid": "62c64f91-1b23-1646-9a5c-df1daa28cac0"
+      },
+      {
+       "prefab_uid": "e92436c6-ce28-1040-b50a-a85d2a8145bd",
+       "uid": "2f9e9acc-5a71-ea41-9067-69b3f1ba4a0c"
+      },
+      {
+       "prefab_uid": "11980993-3bde-1b45-9219-deb52980ab4d",
+       "uid": "033cf1aa-ff69-5e46-bbf5-1b97b2119ded"
+      },
+      {
+       "prefab_uid": "09de0295-dbd4-db4d-a866-44e35055671b",
+       "uid": "4cadf2cc-28e6-354f-bc31-6d8aae6fc194"
+      },
+      {
+       "prefab_uid": "72ba94ff-40ae-804b-b03f-3d71bb621899",
+       "uid": "a472493e-7e8f-7445-b64d-01850fb05b6b"
+      },
+      {
+       "prefab_uid": "6733ef1c-da0b-6546-8492-d85cdb01bd95",
+       "uid": "c1aae188-3c94-7c47-813e-30b28b210c7f"
+      },
+      {
+       "prefab_uid": "eca81c70-f400-0a42-9b6e-08460255909e",
+       "uid": "60f225bc-2761-0242-8a7b-bd9b09f3d830"
+      },
+      {
+       "prefab_uid": "9eb1b757-1baa-304b-a83f-4c7c0f175b58",
+       "uid": "67af59a3-324b-894f-9d42-2afb3eacedb6"
+      },
+      {
+       "prefab_uid": "6001b461-8013-d744-8395-8e3d4cad2213",
+       "uid": "7475ad5f-d660-874c-a457-3a9fc5a0d962"
+      },
+      {
+       "prefab_uid": "92f98e70-22ef-bf4f-bb89-694e947e1b0f",
+       "uid": "0c2f9560-0d81-3948-bd12-593fce906a77"
+      },
+      {
+       "prefab_uid": "441ed5bb-aefd-e94c-a8fe-8bb9a066d7d3",
+       "uid": "bbe6db53-67da-8f4f-a3c2-858f0b5706e8"
+      },
+      {
+       "prefab_uid": "ce8d04b6-8d44-4c49-9e5f-c184628c3867",
+       "uid": "a1a1344b-1c95-7c44-98e5-43c346816992"
+      },
+      {
+       "prefab_uid": "dd46d02c-2de0-ec44-9fe1-53dedefbf095",
+       "uid": "027d8fde-f2fb-cd4d-8fb4-c1d693d1f278"
+      },
+      {
+       "prefab_uid": "02f5abc6-e0ac-cd46-aba2-042833653cc5",
+       "uid": "84eff440-a64a-4148-a03f-e5bc6882a1bd"
+      },
+      {
+       "prefab_uid": "f6941689-d70c-bf4a-8f0b-65f12a894986",
+       "uid": "9ef9ba59-4abe-2e4a-a69a-2354fcb79087"
+      },
+      {
+       "prefab_uid": "fbdbf1cd-60df-e14b-8587-a106249608a7",
+       "uid": "e93dc8a7-08a0-aa49-953f-215163336826"
+      }
+     ],
+     "active": true
+    }
+   }
+  },
+  {
+   "prefab_uid": "cec6db92-698f-344e-961d-c419302517cd",
+   "uid": "ce59a5d6-f23f-4445-aafa-1919b80e8dd4",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "ce59a5d6-f23f-4445-aafa-1919b80e8dd4"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 1",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "cec6db92-698f-344e-961d-c419302517cd",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "6c6e541d-0d05-c14c-9507-31d92c477171",
+       "uid": "63b8a640-bd87-7f4c-8fff-48753c2d6ace"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "daaa9bd1-77f6-eb4f-9cf1-046a25312e4d"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "6c6e541d-0d05-c14c-9507-31d92c477171",
+   "uid": "63b8a640-bd87-7f4c-8fff-48753c2d6ace",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "63b8a640-bd87-7f4c-8fff-48753c2d6ace"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "6c6e541d-0d05-c14c-9507-31d92c477171",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "cec6db92-698f-344e-961d-c419302517cd",
+      "uid": "ce59a5d6-f23f-4445-aafa-1919b80e8dd4"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "881b7948-c772-4941-86a8-53e39af8e652",
+   "uid": "b088ff76-3697-0c49-944a-957910155a77",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "b088ff76-3697-0c49-944a-957910155a77"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 2",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "881b7948-c772-4941-86a8-53e39af8e652",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "3bc5bfd5-57aa-3a4b-a423-33b31b89895d",
+       "uid": "f53261bb-7e15-0d40-ac70-32b264d5d138"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "c30eec89-fadc-7043-a316-55243219fd95"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "3bc5bfd5-57aa-3a4b-a423-33b31b89895d",
+   "uid": "f53261bb-7e15-0d40-ac70-32b264d5d138",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "f53261bb-7e15-0d40-ac70-32b264d5d138"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "3bc5bfd5-57aa-3a4b-a423-33b31b89895d",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "881b7948-c772-4941-86a8-53e39af8e652",
+      "uid": "b088ff76-3697-0c49-944a-957910155a77"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "a2675e16-b404-e541-bcb0-603f76d3314d",
+   "uid": "0c7479c5-9c4d-c34c-b3df-0defc6eb1db7",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "0c7479c5-9c4d-c34c-b3df-0defc6eb1db7"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 3",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "a2675e16-b404-e541-bcb0-603f76d3314d",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "64074f77-dde8-144f-8495-b5e13e222a3a",
+       "uid": "5db82c83-2c40-9046-863a-3f10824334a0"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "24703d99-f09d-624a-b773-3e11a089a5e0"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "64074f77-dde8-144f-8495-b5e13e222a3a",
+   "uid": "5db82c83-2c40-9046-863a-3f10824334a0",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "5db82c83-2c40-9046-863a-3f10824334a0"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "64074f77-dde8-144f-8495-b5e13e222a3a",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "a2675e16-b404-e541-bcb0-603f76d3314d",
+      "uid": "0c7479c5-9c4d-c34c-b3df-0defc6eb1db7"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "3f5159eb-7506-0b4f-aeb8-c9f7494fbb61",
+   "uid": "838b4d8e-72d3-ec45-9499-0fba166bee9f",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "838b4d8e-72d3-ec45-9499-0fba166bee9f"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 4",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "3f5159eb-7506-0b4f-aeb8-c9f7494fbb61",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "104505c7-d475-9841-b1c7-deff70b6b8af",
+       "uid": "b3db6269-ec3b-f94f-85ee-89e6b931daf7"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "daaa9bd1-77f6-eb4f-9cf1-046a25312e4d"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "104505c7-d475-9841-b1c7-deff70b6b8af",
+   "uid": "b3db6269-ec3b-f94f-85ee-89e6b931daf7",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "b3db6269-ec3b-f94f-85ee-89e6b931daf7"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "104505c7-d475-9841-b1c7-deff70b6b8af",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "3f5159eb-7506-0b4f-aeb8-c9f7494fbb61",
+      "uid": "838b4d8e-72d3-ec45-9499-0fba166bee9f"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "b43f008d-27fe-4645-aa57-6d57b612e086",
+   "uid": "a8b34dd0-7d88-bc4e-986a-1e4ef8c24b9d",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "a8b34dd0-7d88-bc4e-986a-1e4ef8c24b9d"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 5",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "b43f008d-27fe-4645-aa57-6d57b612e086",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "d87cb52e-c31d-6543-b92c-1b5c8e53c307",
+       "uid": "d5b93a44-e5ce-7449-afe1-57c145bbbdb8"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "c30eec89-fadc-7043-a316-55243219fd95"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "d87cb52e-c31d-6543-b92c-1b5c8e53c307",
+   "uid": "d5b93a44-e5ce-7449-afe1-57c145bbbdb8",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "d5b93a44-e5ce-7449-afe1-57c145bbbdb8"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "d87cb52e-c31d-6543-b92c-1b5c8e53c307",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "b43f008d-27fe-4645-aa57-6d57b612e086",
+      "uid": "a8b34dd0-7d88-bc4e-986a-1e4ef8c24b9d"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "bf0affde-574e-7a49-bfbd-2cbc0db24d83",
+   "uid": "11ec870e-02e0-1a4b-9141-396ecf741203",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "11ec870e-02e0-1a4b-9141-396ecf741203"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 6",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "bf0affde-574e-7a49-bfbd-2cbc0db24d83",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "bf8f2a0c-bef3-a849-87f5-735ce2233b78",
+       "uid": "b5f438e8-fd61-7e46-a724-fc8b1638f7f7"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "24703d99-f09d-624a-b773-3e11a089a5e0"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "bf8f2a0c-bef3-a849-87f5-735ce2233b78",
+   "uid": "b5f438e8-fd61-7e46-a724-fc8b1638f7f7",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "b5f438e8-fd61-7e46-a724-fc8b1638f7f7"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "bf8f2a0c-bef3-a849-87f5-735ce2233b78",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "bf0affde-574e-7a49-bfbd-2cbc0db24d83",
+      "uid": "11ec870e-02e0-1a4b-9141-396ecf741203"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "6f9b702f-5023-764b-bb2b-5cae9f506673",
+   "uid": "62c64f91-1b23-1646-9a5c-df1daa28cac0",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "62c64f91-1b23-1646-9a5c-df1daa28cac0"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 7",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "6f9b702f-5023-764b-bb2b-5cae9f506673",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "7f219980-ec26-1942-be63-22a96c64bef6",
+       "uid": "0d327d87-6c52-8d41-895a-4fbd53204524"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "daaa9bd1-77f6-eb4f-9cf1-046a25312e4d"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "7f219980-ec26-1942-be63-22a96c64bef6",
+   "uid": "0d327d87-6c52-8d41-895a-4fbd53204524",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "0d327d87-6c52-8d41-895a-4fbd53204524"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "7f219980-ec26-1942-be63-22a96c64bef6",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "6f9b702f-5023-764b-bb2b-5cae9f506673",
+      "uid": "62c64f91-1b23-1646-9a5c-df1daa28cac0"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "e92436c6-ce28-1040-b50a-a85d2a8145bd",
+   "uid": "2f9e9acc-5a71-ea41-9067-69b3f1ba4a0c",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "2f9e9acc-5a71-ea41-9067-69b3f1ba4a0c"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 8",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "e92436c6-ce28-1040-b50a-a85d2a8145bd",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "781f5001-3729-1842-b613-3217ff89fd9e",
+       "uid": "0ebf58e3-6524-6445-82cf-fd7369ca93f7"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "c30eec89-fadc-7043-a316-55243219fd95"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "781f5001-3729-1842-b613-3217ff89fd9e",
+   "uid": "0ebf58e3-6524-6445-82cf-fd7369ca93f7",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "0ebf58e3-6524-6445-82cf-fd7369ca93f7"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "781f5001-3729-1842-b613-3217ff89fd9e",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "e92436c6-ce28-1040-b50a-a85d2a8145bd",
+      "uid": "2f9e9acc-5a71-ea41-9067-69b3f1ba4a0c"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "11980993-3bde-1b45-9219-deb52980ab4d",
+   "uid": "033cf1aa-ff69-5e46-bbf5-1b97b2119ded",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "033cf1aa-ff69-5e46-bbf5-1b97b2119ded"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 9",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "11980993-3bde-1b45-9219-deb52980ab4d",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "3b859167-a54b-1b4b-b13b-1973c82ec77a",
+       "uid": "cd553616-215a-b142-a3a7-49282eb8fc58"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "24703d99-f09d-624a-b773-3e11a089a5e0"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "3b859167-a54b-1b4b-b13b-1973c82ec77a",
+   "uid": "cd553616-215a-b142-a3a7-49282eb8fc58",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "cd553616-215a-b142-a3a7-49282eb8fc58"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "3b859167-a54b-1b4b-b13b-1973c82ec77a",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "11980993-3bde-1b45-9219-deb52980ab4d",
+      "uid": "033cf1aa-ff69-5e46-bbf5-1b97b2119ded"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "09de0295-dbd4-db4d-a866-44e35055671b",
+   "uid": "4cadf2cc-28e6-354f-bc31-6d8aae6fc194",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "4cadf2cc-28e6-354f-bc31-6d8aae6fc194"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 10",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "09de0295-dbd4-db4d-a866-44e35055671b",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "93af1f80-c3e4-904a-8caa-67b6df638171",
+       "uid": "cf5518ad-b93a-584a-86d3-5fa31decdb80"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "daaa9bd1-77f6-eb4f-9cf1-046a25312e4d"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "93af1f80-c3e4-904a-8caa-67b6df638171",
+   "uid": "cf5518ad-b93a-584a-86d3-5fa31decdb80",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "cf5518ad-b93a-584a-86d3-5fa31decdb80"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "93af1f80-c3e4-904a-8caa-67b6df638171",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "09de0295-dbd4-db4d-a866-44e35055671b",
+      "uid": "4cadf2cc-28e6-354f-bc31-6d8aae6fc194"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "72ba94ff-40ae-804b-b03f-3d71bb621899",
+   "uid": "a472493e-7e8f-7445-b64d-01850fb05b6b",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "a472493e-7e8f-7445-b64d-01850fb05b6b"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 11",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "72ba94ff-40ae-804b-b03f-3d71bb621899",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "e3d15675-f1d6-be47-9625-68d43024b8cc",
+       "uid": "6c9b62b7-7d71-e343-bfab-f1493f237448"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "c30eec89-fadc-7043-a316-55243219fd95"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "e3d15675-f1d6-be47-9625-68d43024b8cc",
+   "uid": "6c9b62b7-7d71-e343-bfab-f1493f237448",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "6c9b62b7-7d71-e343-bfab-f1493f237448"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "e3d15675-f1d6-be47-9625-68d43024b8cc",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "72ba94ff-40ae-804b-b03f-3d71bb621899",
+      "uid": "a472493e-7e8f-7445-b64d-01850fb05b6b"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "6733ef1c-da0b-6546-8492-d85cdb01bd95",
+   "uid": "c1aae188-3c94-7c47-813e-30b28b210c7f",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "c1aae188-3c94-7c47-813e-30b28b210c7f"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 12",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "6733ef1c-da0b-6546-8492-d85cdb01bd95",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "85fa6b01-8964-484a-a6ad-a4781af380fe",
+       "uid": "c1fc1a5c-1b67-aa49-a058-70a9d8c73968"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "24703d99-f09d-624a-b773-3e11a089a5e0"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "85fa6b01-8964-484a-a6ad-a4781af380fe",
+   "uid": "c1fc1a5c-1b67-aa49-a058-70a9d8c73968",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "c1fc1a5c-1b67-aa49-a058-70a9d8c73968"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "85fa6b01-8964-484a-a6ad-a4781af380fe",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "6733ef1c-da0b-6546-8492-d85cdb01bd95",
+      "uid": "c1aae188-3c94-7c47-813e-30b28b210c7f"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "eca81c70-f400-0a42-9b6e-08460255909e",
+   "uid": "60f225bc-2761-0242-8a7b-bd9b09f3d830",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "60f225bc-2761-0242-8a7b-bd9b09f3d830"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 13",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "eca81c70-f400-0a42-9b6e-08460255909e",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "c8d15776-b713-d541-a8bf-d22b885c312a",
+       "uid": "3705095a-3378-8e46-a484-e14ac0fab2d7"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "daaa9bd1-77f6-eb4f-9cf1-046a25312e4d"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "c8d15776-b713-d541-a8bf-d22b885c312a",
+   "uid": "3705095a-3378-8e46-a484-e14ac0fab2d7",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "3705095a-3378-8e46-a484-e14ac0fab2d7"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "c8d15776-b713-d541-a8bf-d22b885c312a",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "eca81c70-f400-0a42-9b6e-08460255909e",
+      "uid": "60f225bc-2761-0242-8a7b-bd9b09f3d830"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "9eb1b757-1baa-304b-a83f-4c7c0f175b58",
+   "uid": "67af59a3-324b-894f-9d42-2afb3eacedb6",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "67af59a3-324b-894f-9d42-2afb3eacedb6"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 14",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "9eb1b757-1baa-304b-a83f-4c7c0f175b58",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "90224afe-6bb5-e444-82a5-d0e0891a070d",
+       "uid": "145aed28-2532-a340-89a8-9548e92b7427"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "c30eec89-fadc-7043-a316-55243219fd95"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "90224afe-6bb5-e444-82a5-d0e0891a070d",
+   "uid": "145aed28-2532-a340-89a8-9548e92b7427",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "145aed28-2532-a340-89a8-9548e92b7427"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "90224afe-6bb5-e444-82a5-d0e0891a070d",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "9eb1b757-1baa-304b-a83f-4c7c0f175b58",
+      "uid": "67af59a3-324b-894f-9d42-2afb3eacedb6"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "6001b461-8013-d744-8395-8e3d4cad2213",
+   "uid": "7475ad5f-d660-874c-a457-3a9fc5a0d962",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "7475ad5f-d660-874c-a457-3a9fc5a0d962"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 15",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "6001b461-8013-d744-8395-8e3d4cad2213",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "b2b9d475-cb78-a940-a066-4046d99246de",
+       "uid": "eb52e78a-feb7-6044-82f8-f3acd4a86c15"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "24703d99-f09d-624a-b773-3e11a089a5e0"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "b2b9d475-cb78-a940-a066-4046d99246de",
+   "uid": "eb52e78a-feb7-6044-82f8-f3acd4a86c15",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "eb52e78a-feb7-6044-82f8-f3acd4a86c15"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "b2b9d475-cb78-a940-a066-4046d99246de",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "6001b461-8013-d744-8395-8e3d4cad2213",
+      "uid": "7475ad5f-d660-874c-a457-3a9fc5a0d962"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "92f98e70-22ef-bf4f-bb89-694e947e1b0f",
+   "uid": "0c2f9560-0d81-3948-bd12-593fce906a77",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "0c2f9560-0d81-3948-bd12-593fce906a77"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 16",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "92f98e70-22ef-bf4f-bb89-694e947e1b0f",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "ed9b27f5-0d83-364d-8e2f-98f754aae06a",
+       "uid": "2ac4b5cb-4cbf-8945-b376-1c48a362193f"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "daaa9bd1-77f6-eb4f-9cf1-046a25312e4d"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "ed9b27f5-0d83-364d-8e2f-98f754aae06a",
+   "uid": "2ac4b5cb-4cbf-8945-b376-1c48a362193f",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "2ac4b5cb-4cbf-8945-b376-1c48a362193f"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "ed9b27f5-0d83-364d-8e2f-98f754aae06a",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "92f98e70-22ef-bf4f-bb89-694e947e1b0f",
+      "uid": "0c2f9560-0d81-3948-bd12-593fce906a77"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "441ed5bb-aefd-e94c-a8fe-8bb9a066d7d3",
+   "uid": "bbe6db53-67da-8f4f-a3c2-858f0b5706e8",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "bbe6db53-67da-8f4f-a3c2-858f0b5706e8"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 17",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "441ed5bb-aefd-e94c-a8fe-8bb9a066d7d3",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "2cd3f6de-4c4c-2c44-8196-04091be55b7a",
+       "uid": "369722c4-4ce5-204b-b5c7-92f0852c6448"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "c30eec89-fadc-7043-a316-55243219fd95"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "2cd3f6de-4c4c-2c44-8196-04091be55b7a",
+   "uid": "369722c4-4ce5-204b-b5c7-92f0852c6448",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "369722c4-4ce5-204b-b5c7-92f0852c6448"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "2cd3f6de-4c4c-2c44-8196-04091be55b7a",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "441ed5bb-aefd-e94c-a8fe-8bb9a066d7d3",
+      "uid": "bbe6db53-67da-8f4f-a3c2-858f0b5706e8"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "ce8d04b6-8d44-4c49-9e5f-c184628c3867",
+   "uid": "a1a1344b-1c95-7c44-98e5-43c346816992",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "a1a1344b-1c95-7c44-98e5-43c346816992"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 18",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "ce8d04b6-8d44-4c49-9e5f-c184628c3867",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "93ccbf9d-8b42-2646-a490-a316e6c2dac5",
+       "uid": "4459fe53-19fd-bd47-bbbf-7b0a68bf6578"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "24703d99-f09d-624a-b773-3e11a089a5e0"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "93ccbf9d-8b42-2646-a490-a316e6c2dac5",
+   "uid": "4459fe53-19fd-bd47-bbbf-7b0a68bf6578",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "4459fe53-19fd-bd47-bbbf-7b0a68bf6578"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "93ccbf9d-8b42-2646-a490-a316e6c2dac5",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "ce8d04b6-8d44-4c49-9e5f-c184628c3867",
+      "uid": "a1a1344b-1c95-7c44-98e5-43c346816992"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "dd46d02c-2de0-ec44-9fe1-53dedefbf095",
+   "uid": "027d8fde-f2fb-cd4d-8fb4-c1d693d1f278",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "027d8fde-f2fb-cd4d-8fb4-c1d693d1f278"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 19",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "dd46d02c-2de0-ec44-9fe1-53dedefbf095",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "53184a54-850b-6349-8801-1051445131a1",
+       "uid": "3510e9e4-5cd3-8144-82ce-f73f2237e0df"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "daaa9bd1-77f6-eb4f-9cf1-046a25312e4d"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "53184a54-850b-6349-8801-1051445131a1",
+   "uid": "3510e9e4-5cd3-8144-82ce-f73f2237e0df",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "3510e9e4-5cd3-8144-82ce-f73f2237e0df"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "53184a54-850b-6349-8801-1051445131a1",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "dd46d02c-2de0-ec44-9fe1-53dedefbf095",
+      "uid": "027d8fde-f2fb-cd4d-8fb4-c1d693d1f278"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "02f5abc6-e0ac-cd46-aba2-042833653cc5",
+   "uid": "84eff440-a64a-4148-a03f-e5bc6882a1bd",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "84eff440-a64a-4148-a03f-e5bc6882a1bd"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 20",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "02f5abc6-e0ac-cd46-aba2-042833653cc5",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "666b1b3a-a6ff-ef41-9311-dda2f63fc601",
+       "uid": "2b7887c8-d46c-e54c-8de4-6d54121ae08e"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "c30eec89-fadc-7043-a316-55243219fd95"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "666b1b3a-a6ff-ef41-9311-dda2f63fc601",
+   "uid": "2b7887c8-d46c-e54c-8de4-6d54121ae08e",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "2b7887c8-d46c-e54c-8de4-6d54121ae08e"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "666b1b3a-a6ff-ef41-9311-dda2f63fc601",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "02f5abc6-e0ac-cd46-aba2-042833653cc5",
+      "uid": "84eff440-a64a-4148-a03f-e5bc6882a1bd"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "f6941689-d70c-bf4a-8f0b-65f12a894986",
+   "uid": "9ef9ba59-4abe-2e4a-a69a-2354fcb79087",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "9ef9ba59-4abe-2e4a-a69a-2354fcb79087"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 21",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "f6941689-d70c-bf4a-8f0b-65f12a894986",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "60568304-b2dd-e346-a56d-014f6e494d12",
+       "uid": "dc6b4355-ba9a-ef48-8c68-9f20bac0fab3"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "24703d99-f09d-624a-b773-3e11a089a5e0"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "60568304-b2dd-e346-a56d-014f6e494d12",
+   "uid": "dc6b4355-ba9a-ef48-8c68-9f20bac0fab3",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "dc6b4355-ba9a-ef48-8c68-9f20bac0fab3"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "60568304-b2dd-e346-a56d-014f6e494d12",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "f6941689-d70c-bf4a-8f0b-65f12a894986",
+      "uid": "9ef9ba59-4abe-2e4a-a69a-2354fcb79087"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "prefab_uid": "fbdbf1cd-60df-e14b-8587-a106249608a7",
+   "uid": "e93dc8a7-08a0-aa49-953f-215163336826",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "e93dc8a7-08a0-aa49-953f-215163336826"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Frost Crystal 22",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "fbdbf1cd-60df-e14b-8587-a106249608a7",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "rotation_euler": {
+       "x": 0.0,
+       "y": -0.0,
+       "z": 0.0
+      },
+      "scale": {
+       "x": 0.0010000000474974514,
+       "y": 0.0010000000474974514,
+       "z": 0.0010000000474974514
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "2eb19eeb-ad5b-484c-abf3-3404a6e2e27c",
+      "uid": "66ed5422-f8e4-8c47-9c1b-97c0833d0940"
+     },
+     "children": [
+      {
+       "prefab_uid": "d21cb029-a205-a449-81a9-44ebd7030210",
+       "uid": "e18c12ba-535b-d14b-be30-91801aad8c8c"
+      }
+     ],
+     "active": true
+    },
+    "has_model_component": true,
+    "model_component": {
+     "enabled": true,
+     "static": false,
+     "casts_shadow": true,
+     "model": {
+      "lods": [
+       {
+        "uid": "daaa9bd1-77f6-eb4f-9cf1-046a25312e4d"
+       }
+      ],
+      "materials": [
+       {
+        "uid": "adc148f8-a2ba-8c4a-ac9e-b171cc155783"
+       }
+      ],
+      "material_instances": [],
+      "lod_override_enabled": false,
+      "lod_override_level": 0,
+      "lod_selection_bias": 0.0,
+      "lod_transition_time": {
+       "count": 0.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "prefab_uid": "d21cb029-a205-a449-81a9-44ebd7030210",
+   "uid": "e18c12ba-535b-d14b-be30-91801aad8c8c",
+   "components": {
+    "has_id_component": true,
+    "id_component": {
+     "id": "e18c12ba-535b-d14b-be30-91801aad8c8c"
+    },
+    "has_tag_component": true,
+    "tag_component": {
+     "name": "Ice",
+     "tag": ""
+    },
+    "has_layer_component": true,
+    "layer_component": {
+     "layers": {
+      "mask": 1
+     }
+    },
+    "has_prefab_id_component": true,
+    "prefab_id_component": {
+     "id": "d21cb029-a205-a449-81a9-44ebd7030210",
+     "document": "8b2efb03-22b1-4645-a21e-fae038d17de3"
+    },
+    "has_transform_component": true,
+    "transform_component": {
+     "local_transform": {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": -0.0
+      },
+      "rotation_euler": {
+       "x": -180.0,
+       "y": -0.000005008956122765085,
+       "z": 180.0
+      },
+      "scale": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "skew": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      }
+     },
+     "parent": {
+      "prefab_uid": "fbdbf1cd-60df-e14b-8587-a106249608a7",
+      "uid": "e93dc8a7-08a0-aa49-953f-215163336826"
+     },
+     "children": [],
+     "active": true
+    },
+    "has_submesh_component": true,
+    "submesh_component": {
+     "entries": [
+      {
+       "submesh_index": 0,
+       "stable_id": 3580699424,
+       "casts_shadow": true,
+       "enabled": true
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "version": "1.0.0"
+}

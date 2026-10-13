@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>app-script</name>
+    </assembly>
+    <members>
+        <member name="T:ParticlesSample.TrainingDummy">
+             <summary>
+             A target that reacts to spells: its straw glows in the spell's colour and it rocks on its post.
+            
+             The glow writes this dummy's own materials (SetColor / SetFloat on its models), so the other
+             dummies keep the shared Straw material; ResetMaterial gives the shared one back afterwards.
+             </summary>
+        </member>
+        <member name="F:ParticlesSample.TrainingDummy.All">
+            <summary>Every dummy in the scene, for spells that look for targets around them.</summary>
+        </member>
+        <member name="F:ParticlesSample.TrainingDummy.glowFade">
+            <summary>Strength lost per second once the hold is over.</summary>
+        </member>
+        <member name="M:ParticlesSample.TrainingDummy.GetCenter">
+            <summary>Where spells aim at this dummy: the middle of its body.</summary>
+        </member>
+        <member name="M:ParticlesSample.TrainingDummy.Hit(Color,System.Single,System.Single)">
+            <summary>
+            Glows in <paramref name="color"/> at <paramref name="strength"/> (about 0-1.5), holds it for
+            <paramref name="holdSeconds"/>, and gives the dummy a push.
+            </summary>
+        </member>
+        <member name="T:ParticlesSample.ArenaHud">
+            <summary>
+            Drives app:/data/UI/arena_hud.rhtml through the data model "arena": the spell bar, the
+            selected spell, and the live particle count with the state of the arena's switches.
+            It reads SpellCaster a few times a second and marks the whole model dirty.
+            </summary>
+        </member>
+        <member name="T:ParticlesSample.ArenaHud.SpellSlot">
+            <summary>One slot of the spell bar.</summary>
+        </member>
+        <member name="T:ParticlesSample.ArenaHud.HudModel">
+            <summary>The object behind the data model "arena".</summary>
+        </member>
+        <member name="T:ParticlesSample.Brazier">
+             <summary>
+             One brazier: the flame emitter on this entity, its embers and smoke on the children, and
+             the light that flickers with them.
+            
+             Stop(true) stops this emitter and every emitter below it. Stopping only ends the spawning:
+             the flames, embers and smoke already alive finish their lives, so the fire dies down
+             instead of vanishing. Play(true) lights it again.
+             </summary>
+        </member>
+        <member name="T:ParticlesSample.SpellCaster">
+             <summary>
+             The player's side of the arena: picks a spell, casts it where the mouse points, and toggles
+             the arena-wide particle switches.
+            
+               1-5          pick a spell                 P   freeze every particle (Pause / Resume)
+               Left click   cast at the cursor           T   put the braziers out and light them (Stop / Play)
+               Space        cast at a random dummy       G   wind on the smoke (force over lifetime)
+                                                         B   slow motion (Time.timeScale)
+            
+             The actions (Spell 1 ... Slow Motion) are defined in the project's input settings.
+             </summary>
+        </member>
+        <member name="F:ParticlesSample.SpellCaster.arenaRadius">
+            <summary>Casts land on the floor within this radius of the arena's centre.</summary>
+        </member>
+        <member name="F:ParticlesSample.SpellCaster.Main">
+            <summary>The caster in the scene, for the HUD.</summary>
+        </member>
+        <member name="M:ParticlesSample.SpellCaster.TryGetCursorTarget(Vector3@)">
+            <summary>
+            Where the cursor points on the arena floor: the camera's ray through the mouse, cut with
+            the floor's plane (y = 0). No collider is needed for a flat floor.
+            </summary>
+        </member>
+        <member name="M:ParticlesSample.SpellCaster.SetFrozen(System.Boolean)">
+            <summary>
+            Pause freezes an emitter's particles where they are; Resume lets them go on. Bursts still
+            spawn while paused, so a spell cast into a frozen arena hangs in the air.
+            </summary>
+        </member>
+        <member name="M:ParticlesSample.SpellCaster.SetSlowMotion(System.Boolean)">
+            <summary>
+            Particles advance with the game clock, so a lower time scale slows every effect, and the
+            spells' coroutines with them.
+            </summary>
+        </member>
+        <member name="M:ParticlesSample.SpellCaster.CountParticles">
+            <summary>Live particles across every emitter in the scene.</summary>
+        </member>
+        <member name="T:ParticlesSample.Flicker">
+            <summary>
+            Makes a light flicker like a flame: its intensity wanders around the value it was built with.
+            The particles of a fire are not lit and light nothing, so a fire's light is a separate point
+            light that has to move with the flames by itself.
+            </summary>
+        </member>
+        <member name="F:ParticlesSample.Flicker.amount">
+            <summary>How far the intensity strays, as a fraction of its base value.</summary>
+        </member>
+        <member name="T:ParticlesSample.LightFlash">
+            <summary>
+            Drives the point light of a spell. Particles are unlit and cast no light, so the flash of an
+            explosion on the floor and the dummies comes from this light, timed with the burst.
+            The light stays disabled while it is dark, which costs nothing.
+            </summary>
+        </member>
+        <member name="M:ParticlesSample.LightFlash.Flash(System.Single,System.Single,System.Boolean)">
+            <summary>Jumps to <paramref name="intensity"/> and fades out over <paramref name="seconds"/>.</summary>
+        </member>
+        <member name="M:ParticlesSample.LightFlash.Swell(System.Single,System.Single)">
+            <summary>Rises to <paramref name="intensity"/> and falls back over <paramref name="seconds"/>.</summary>
+        </member>
+        <member name="M:ParticlesSample.LightFlash.Hold(System.Single)">
+            <summary>Holds the light at <paramref name="intensity"/> until the next Flash, Swell or Hold.</summary>
+        </member>
+        <member name="T:ParticlesSample.OrbitCamera">
+            <summary>
+            Orbits the camera around the arena: right mouse drag turns, the wheel zooms. The left button
+            stays free for casting. Spells call Shake for impacts.
+            </summary>
+        </member>
+        <member name="F:ParticlesSample.OrbitCamera.sensitivity">
+            <summary>Degrees per unit of mouse movement, scaled by the frame time.</summary>
+        </member>
+        <member name="F:ParticlesSample.OrbitCamera.Main">
+            <summary>The camera the arena is seen through, for spells that shake it.</summary>
+        </member>
+        <member name="M:ParticlesSample.OrbitCamera.Shake(System.Single,System.Single)">
+            <summary>Shakes the view by up to <paramref name="strength"/> metres, calming over <paramref name="seconds"/>.</summary>
+        </member>
+        <member name="T:ParticlesSample.Spinner">
+             <summary>
+             Turns the entity around the vertical axis and, optionally, bobs it up and down.
+            
+             Particles care about this in two ways: a horizontal billboard (a rune circle on the floor)
+             turns with its emitter's entity, and a local-space emitter carries its live particles round
+             with the entity, which turns a straight path into a spiral.
+             </summary>
+        </member>
+        <member name="F:ParticlesSample.Spinner.bobHeight">
+            <summary>Metres up and down; 0 keeps the entity at its height.</summary>
+        </member>
+        <member name="F:ParticlesSample.Spinner.bobSpeed">
+            <summary>Bobs per second.</summary>
+        </member>
+        <member name="T:ParticlesSample.WindAffected">
+             <summary>
+             An emitter the arena's wind pushes. SpellCaster toggles the wind; this adds it to the
+             emitter's force over lifetime, on top of the force the emitter was built with.
+            
+             The force bends where a particle ends up, and it is applied when the particle is born, so
+             smoke already in the air keeps its path and the new puffs lean over.
+             </summary>
+        </member>
+        <member name="F:ParticlesSample.WindAffected.response">
+            <summary>How strongly this emitter follows the wind: light smoke more than heavy embers.</summary>
+        </member>
+        <member name="T:ParticlesSample.ArcaneVortexSpell">
+             <summary>
+             Arcane Vortex: two rune circles open and turn against each other, glyphs rise from the outer
+             one, wisps and sparks spiral into the centre faster and faster around a growing column of
+             light, then the vortex bursts outwards. Every cast opens a vortex of its own.
+            
+             Shows: a pooled effect. The vortex is a prefab; each cast takes an instance from an
+             EntityPool (Acquire places it at the target), drives it, and gives it back once its last
+             particles have died (Release with a delay), so casts can overlap without spawning and
+             destroying entities. Also: local simulation space (the wisps, the swirl and the core turn
+             with the spinning instance, so a straight run to the centre becomes a spiral), rune circles
+             that turn by their own rotation speed, and emission rates raised every frame while channelling.
+             </summary>
+        </member>
+        <member name="F:ParticlesSample.ArcaneVortexSpell.releaseDelay">
+            <summary>Seconds after the burst before the instance goes back to the pool: its last particles have died.</summary>
+        </member>
+        <member name="F:ParticlesSample.ArcaneVortexSpell.startSpin">
+            <summary>Spin of the vortex at the start and the end of the channel, degrees per second.</summary>
+        </member>
+        <member name="F:ParticlesSample.ArcaneVortexSpell.channelLightStart">
+            <summary>The vortex light grows from the first to the second value while channelling.</summary>
+        </member>
+        <member name="T:ParticlesSample.FireballSpell">
+             <summary>
+             Fireball: a projectile flies from the spell focus to the target and explodes.
+            
+             Shows: emitters that move. The projectile's core and its rolling body simulate in local
+             space and stay on it; its flames, smoke and embers simulate in world space and stay behind
+             as a trail. An emitter that moves spreads each frame's spawns along the path it covered that
+             frame (temporal motion), so a fast trail stays continuous. Stop leaves the trail to fade out.
+             The explosion layers burst emitters: a flash, a flipbook fireball that blends between its
+             frames, rolling smoke that takes over from it, a smoke column, sparks and burning chunks
+             bent down by gravity, a dust ring and a shock ring on the floor, a scorch mark with glowing
+             embers in it, and falling ash.
+             </summary>
+        </member>
+        <member name="F:ParticlesSample.FireballSpell.launchFrom">
+            <summary>Name of the entity the fireball is launched from.</summary>
+        </member>
+        <member name="F:ParticlesSample.FireballSpell.arcHeight">
+            <summary>Metres the path rises above the straight line, at its middle.</summary>
+        </member>
+        <member name="T:ParticlesSample.FrostNovaSpell">
+             <summary>
+             Frost Nova: ice shards burst out and stop, two rings of faceted ice crystals erupt from the
+             floor, cold mist rolls out, frost spreads under it and snow drifts down. The crystals hold
+             for a moment and shatter into shards and ice dust, and the dummies caught in the ring stay
+             frozen until they do.
+            
+             Shows: particles working with meshes. The crystals are a prefab of lit, faceted meshes that
+             an EntityPool hands out, one instance per cast; the script lays the ring out, grows every
+             crystal with an overshoot (inner ring first) and, at the shatter, emits shards and dust at
+             each crystal's own position with EmitParams. Also: position easing (OutExpo shards burst out
+             and stop dead) and horizontal billboards that lie on the floor.
+             </summary>
+        </member>
+        <member name="F:ParticlesSample.FrostNovaSpell.shatterAfter">
+            <summary>Seconds the crystals stand before they shatter.</summary>
+        </member>
+        <member name="F:ParticlesSample.FrostNovaSpell.growSeconds">
+            <summary>Seconds a crystal takes to burst out of the floor.</summary>
+        </member>
+        <member name="F:ParticlesSample.FrostNovaSpell.outerRingDelay">
+            <summary>Delay of the outer ring after the inner one.</summary>
+        </member>
+        <member name="M:ParticlesSample.FrostNovaSpell.EaseOutBack(System.Single)">
+            <summary>Overshoots a little past 1 and settles back: the crystal snaps out of the floor.</summary>
+        </member>
+        <member name="T:ParticlesSample.HolyLightSpell">
+             <summary>
+             Holy Light: a column of light comes down with thin rays flickering around it, sparkles fall
+             through it and rise again, a golden circle turns on the floor, rings spread out, and the
+             dummies inside it are healed.
+            
+             Shows: vertical billboards (the beams stand upright and only turn around their own axis to
+             face the camera; the pivot puts their bottom edge on the floor), several layers of one beam
+             texture at different widths and brightness, short non-looping streams started with Play,
+             a staggered burst from a coroutine, and Emit with a position for the heal marks that rise
+             from each healed dummy.
+             </summary>
+        </member>
+        <member name="T:ParticlesSample.LightningSpell">
+             <summary>
+             Lightning: energy gathers on the floor for a quarter of a second, then bolts strike down the
+             same channel three times. The impact flashes, a shock ring runs out, sparks spray and fall,
+             arcs crawl over the ground, smoke and embers hang in the air, and the strike arcs on to the
+             dummies nearby.
+            
+             Shows: timing a layered effect from a coroutine; burst emitters fired with Emit; a sheet of
+             bolt variants where each particle holds one random tile; short non-looping emitters started
+             with Play; and EmitParams, which places a single arc particle between two points - halfway,
+             as long as the gap, turned along it.
+             Each layer faces the camera the way its shape needs: the bolt, its glow, the flash and the
+             crackles at the strike are vertical billboards that stay upright from every angle, the rings,
+             the scorch and the arcs crawling outward lie flat on the floor, and only round or volumetric
+             things (sparks, embers, smoke) turn fully to the camera.
+             </summary>
+        </member>
+        <member name="T:ParticlesSample.SpellInfo">
+            <summary>What the HUD shows about a spell.</summary>
+        </member>
+        <member name="F:ParticlesSample.SpellInfo.slot">
+            <summary>The number key that selects the spell, and its place on the spell bar.</summary>
+        </member>
+        <member name="F:ParticlesSample.SpellInfo.accent">
+            <summary>The spell's colour on the HUD, as CSS.</summary>
+        </member>
+        <member name="T:ParticlesSample.Spell">
+             <summary>
+             Base of the five spells. A spell's entity holds its effect as child entities, one emitter
+             each; casting moves the entity to the target and fires the emitters.
+            
+             The emitters come in three kinds, and the spells show all of them:
+               - burst emitters: emission rate 0, so they spawn nothing by themselves. Emit(count) puts
+                 exactly that many particles out at the next update, whatever the play state;
+               - short non-looping emitters (a lifetime of emission, loop off, auto play off so they
+                 wait for the cast): Play() runs them once;
+               - looping emitters whose rate the script changes while they run.
+             The burst emitters simulate in world space, so moving the spell to the next target leaves
+             the particles of the last cast where they were.
+             </summary>
+        </member>
+        <member name="F:ParticlesSample.Spell.All">
+            <summary>Every spell in the scene; SpellCaster picks from these by slot.</summary>
+        </member>
+        <member name="F:ParticlesSample.Spell.castSound">
+            <summary>Asset key of the sound the cast makes; empty for none.</summary>
+        </member>
+        <member name="F:ParticlesSample.Spell.cooldown">
+            <summary>Seconds before the spell can be cast again.</summary>
+        </member>
+        <member name="M:ParticlesSample.Spell.TryCast(Vector3)">
+            <summary>Casts at <paramref name="target"/> (a point on the floor) unless the spell is cooling down.</summary>
+        </member>
+        <member name="M:ParticlesSample.Spell.GetEmitter(System.String)">
+            <summary>The emitter on the child entity called <paramref name="childName"/>.</summary>
+        </member>
+        <member name="M:ParticlesSample.Spell.GetLight(System.String)">
+            <summary>The LightFlash on the child entity called <paramref name="childName"/>.</summary>
+        </member>
+        <member name="M:ParticlesSample.Spell.PlaySound(System.String,System.Single)">
+            <summary>
+            Plays a spell sound on the listener (2D), so the caster's own spells land with full weight: a
+            one-shot placed in the world falls off from 1 m, and the arena is over 10 m from the camera.
+            </summary>
+        </member>
+        <member name="M:ParticlesSample.Spell.GetEmitterIn(Unravel.Core.Entity,System.String)">
+            <summary>The emitter on the entity called <paramref name="childName"/> below <paramref name="root"/>.</summary>
+        </member>
+        <member name="M:ParticlesSample.Spell.GetDummiesNear(Vector3,System.Single)">
+            <summary>The dummies within <paramref name="radius"/> of <paramref name="point"/>, nearest first.</summary>
+        </member>
+        <member name="M:ParticlesSample.Spell.GetFlatDistance(Vector3,Vector3)">
+            <summary>Distance on the floor, ignoring height.</summary>
+        </member>
+    </members>
+</doc>

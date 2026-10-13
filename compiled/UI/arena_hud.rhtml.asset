@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Spell Arena HUD</title>
+    <link type="text/rcss" href="engine:/data/ui/rml.rcss"/>
+    <link type="text/rcss" href="app:/data/UI/arena_hud.rcss"/>
+</head>
+<!--
+    The arena HUD, a screen-space overlay. ArenaHud.cs binds the data model "arena" and refreshes
+    it a few times a second; the markup only says where each value goes. The HUD takes no input
+    (pointer-events: none), so every click reaches the game and casts.
+-->
+<body data-model="arena">
+    <div id="title" class="panel">
+        <div class="heading">Spell Arena</div>
+        <div class="subheading">Unravel particle effects sample</div>
+    </div>
+
+    <div id="stats" class="panel">
+        <div class="count">{{ particles }}</div>
+        <div class="count-label">live particles in {{ emitters }} emitters</div>
+        <div class="switch" data-class-on="frozen"><span class="key">P</span><span class="label">Freeze particles</span><span class="state">{{ frozen ? 'ON' : 'off' }}</span></div>
+        <div class="switch" data-class-on="slowMotion"><span class="key">B</span><span class="label">Slow motion</span><span class="state">{{ slowMotion ? 'ON' : 'off' }}</span></div>
+        <div class="switch" data-class-on="windy"><span class="key">G</span><span class="label">Wind</span><span class="state">{{ windy ? 'ON' : 'off' }}</span></div>
+        <div class="switch" data-class-on="braziers"><span class="key">T</span><span class="label">Braziers</span><span class="state">{{ braziers ? 'lit' : 'out' }}</span></div>
+    </div>
+
+    <div id="controls" class="panel">
+        <div class="control"><span class="key wide">Left click</span>cast at the cursor</div>
+        <div class="control"><span class="key wide">Space</span>cast at a dummy</div>
+        <div class="control"><span class="key wide">Right drag</span>orbit the camera</div>
+        <div class="control"><span class="key wide">Wheel</span>zoom</div>
+    </div>
+
+    <div id="spellbook">
+        <div id="details" class="panel" data-style-border-color="spellAccent != '' ? spellAccent : '#ffffff30'">
+            <div class="spell-name" data-style-color="spellAccent != '' ? spellAccent : '#ffffff'">{{ spellName }}</div>
+            <div class="spell-description">{{ spellDescription }}</div>
+        </div>
+        <div id="bar">
+            <div class="slot" data-for="spell : spells" data-class-selected="spell.selected"
+                 data-style-border-color="spell.selected ? spell.accent : '#ffffff30'">
+                <div class="slot-key" data-style-color="spell.accent">{{ spell.key }}</div>
+                <div class="slot-name">{{ spell.name }}</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

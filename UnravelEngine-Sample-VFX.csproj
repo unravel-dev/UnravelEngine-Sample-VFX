@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>UnravelEngine-Sample-VFX</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <BaseOutputPath>temp/bin</BaseOutputPath>
+    <BaseIntermediateOutputPath>temp/obj</BaseIntermediateOutputPath>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="data/Scripts/Arena/ArenaHud.cs">
+      <Link>Scripts/Arena/ArenaHud.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Arena/Brazier.cs">
+      <Link>Scripts/Arena/Brazier.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Arena/SpellCaster.cs">
+      <Link>Scripts/Arena/SpellCaster.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Arena/TrainingDummy.cs">
+      <Link>Scripts/Arena/TrainingDummy.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Common/Flicker.cs">
+      <Link>Scripts/Common/Flicker.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Common/LightFlash.cs">
+      <Link>Scripts/Common/LightFlash.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Common/OrbitCamera.cs">
+      <Link>Scripts/Common/OrbitCamera.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Common/Spinner.cs">
+      <Link>Scripts/Common/Spinner.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Common/WindAffected.cs">
+      <Link>Scripts/Common/WindAffected.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Spells/ArcaneVortexSpell.cs">
+      <Link>Scripts/Spells/ArcaneVortexSpell.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Spells/FireballSpell.cs">
+      <Link>Scripts/Spells/FireballSpell.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Spells/FrostNovaSpell.cs">
+      <Link>Scripts/Spells/FrostNovaSpell.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Spells/HolyLightSpell.cs">
+      <Link>Scripts/Spells/HolyLightSpell.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Spells/LightningSpell.cs">
+      <Link>Scripts/Spells/LightningSpell.cs</Link>
+    </Compile>
+    <Compile Include="data/Scripts/Spells/Spell.cs">
+      <Link>Scripts/Spells/Spell.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="engine-script.dll">
+      <HintPath>C:/Workspace/github/UnravelEngine/UnravelEngine/build/RelWithDebInfo/bin/data/engine/compiled/engine-script.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

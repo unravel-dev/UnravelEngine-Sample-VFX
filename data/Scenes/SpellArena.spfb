@@ -32767,7 +32767,7 @@
      "ribbon_tile_time": 0.25,
      "stretch_length_scale": 1.0,
      "stretch_speed_scale": 0.05999999865889549,
-     "stretch_camera_velocity_scale": 1.0,
+     "stretch_camera_velocity_scale": 0.0,
      "facing_axis": {
       "x": 0.0,
       "y": 1.0,

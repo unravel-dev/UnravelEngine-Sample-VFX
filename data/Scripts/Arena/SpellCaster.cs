@@ -7,10 +7,11 @@ namespace ParticlesSample
     /// The player's side of the arena: picks a spell, casts it where the mouse points, and toggles
     /// the arena-wide particle switches.
     ///
-    ///   1-5          pick a spell                 P   freeze every particle (Pause / Resume)
+    ///   1-6          pick a spell                 P   freeze every particle (Pause / Resume)
     ///   Left click   cast at the cursor           T   put the braziers out and light them (Stop / Play)
-    ///   Space        cast at a random dummy       G   wind on the smoke (force over lifetime)
+    ///   Space        cast at a random dummy       G   wind on the smoke and the rain (force over lifetime)
     ///                                             B   slow motion (Time.timeScale)
+    ///                                             R   rain over the arena (Play / Stop)
     ///
     /// The actions (Spell 1 ... Slow Motion) are defined in the project's input settings.
     /// </summary>
@@ -23,6 +24,7 @@ namespace ParticlesSample
         public Vector3 windForce = new Vector3(0.9f, 0.05f, 0.35f);
         public float slowMotionScale = 0.25f;
         public string selectSound = "app:/data/Audio/select.wav";
+        public string rainName = "Rain";
 
         /// <summary>The caster in the scene, for the HUD.</summary>
         public static SpellCaster Main;
@@ -36,6 +38,7 @@ namespace ParticlesSample
         bool isWindy;
         bool isSlowMotion;
         bool areBraziersLit = true;
+        bool isRaining;
 
         public override void OnCreate()
         {
@@ -91,6 +94,10 @@ namespace ParticlesSample
             if (Input.IsPressed("Slow Motion"))
             {
                 SetSlowMotion(!isSlowMotion);
+            }
+            if (Input.IsPressed("Toggle Rain"))
+            {
+                SetRaining(!isRaining);
             }
         }
 
@@ -169,6 +176,29 @@ namespace ParticlesSample
         }
 
         /// <summary>
+        /// The rain prewarms the first time it plays, so it is already falling everywhere; after a Stop,
+        /// Play starts it again from the sky.
+        /// </summary>
+        public void SetRaining(bool raining)
+        {
+            var rain = Scene.FindEntityByName(rainName);
+            var emitter = rain ? rain.GetComponent<ParticleEmitterComponent>() : null;
+            if (emitter == null)
+            {
+                return;
+            }
+            isRaining = raining;
+            if (raining)
+            {
+                emitter.Play();
+            }
+            else
+            {
+                emitter.Stop();
+            }
+        }
+
+        /// <summary>
         /// Particles advance with the game clock, so a lower time scale slows every effect, and the
         /// spells' coroutines with them.
         /// </summary>
@@ -211,6 +241,11 @@ namespace ParticlesSample
         public bool AreBraziersLit()
         {
             return areBraziersLit;
+        }
+
+        public bool IsRaining()
+        {
+            return isRaining;
         }
 
         /// <summary>Live particles across every emitter in the scene.</summary>

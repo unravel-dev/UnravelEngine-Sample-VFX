@@ -36,6 +36,7 @@ namespace ParticlesSample
             public bool windy;
             public bool slowMotion;
             public bool braziers = true;
+            public bool raining;
         }
 
         readonly HudModel hud = new HudModel();
@@ -88,6 +89,7 @@ namespace ParticlesSample
             hud.windy = caster.IsWindy();
             hud.slowMotion = caster.IsSlowMotion();
             hud.braziers = caster.AreBraziersLit();
+            hud.raining = caster.IsRaining();
             // Everything here changes from outside the document, so the model cannot see it change.
             model.DirtyAll();
         }

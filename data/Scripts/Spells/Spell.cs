@@ -15,7 +15,7 @@ namespace ParticlesSample
     }
 
     /// <summary>
-    /// Base of the five spells. A spell's entity holds its effect as child entities, one emitter
+    /// Base of the six spells. A spell's entity holds its effect as child entities, one emitter
     /// each; casting moves the entity to the target and fires the emitters.
     ///
     /// The emitters come in three kinds, and the spells show all of them:
@@ -90,12 +90,13 @@ namespace ParticlesSample
         /// <summary>
         /// Plays a spell sound on the listener (2D), so the caster's own spells land with full weight: a
         /// one-shot placed in the world falls off from 1 m, and the arena is over 10 m from the camera.
+        /// A <paramref name="pitch"/> above 1 plays the sound faster and higher, below 1 slower and lower.
         /// </summary>
-        protected static void PlaySound(string key, float volume)
+        protected static void PlaySound(string key, float volume, float pitch = 1.0f)
         {
             if (!string.IsNullOrEmpty(key))
             {
-                Audio.PlayOneShot(Assets.GetAsset<AudioClip>(key), volume);
+                Audio.PlayOneShot(Assets.GetAsset<AudioClip>(key), volume, pitch);
             }
         }
 

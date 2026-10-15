@@ -55,6 +55,9 @@
     <Compile Include="data/Scripts/Spells/LightningSpell.cs">
       <Link>Scripts/Spells/LightningSpell.cs</Link>
     </Compile>
+    <Compile Include="data/Scripts/Spells/MeteorStormSpell.cs">
+      <Link>Scripts/Spells/MeteorStormSpell.cs</Link>
+    </Compile>
     <Compile Include="data/Scripts/Spells/Spell.cs">
       <Link>Scripts/Spells/Spell.cs</Link>
     </Compile>

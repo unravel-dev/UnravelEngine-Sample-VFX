@@ -55,10 +55,11 @@
              The player's side of the arena: picks a spell, casts it where the mouse points, and toggles
              the arena-wide particle switches.
             
-               1-5          pick a spell                 P   freeze every particle (Pause / Resume)
+               1-6          pick a spell                 P   freeze every particle (Pause / Resume)
                Left click   cast at the cursor           T   put the braziers out and light them (Stop / Play)
-               Space        cast at a random dummy       G   wind on the smoke (force over lifetime)
+               Space        cast at a random dummy       G   wind on the smoke and the rain (force over lifetime)
                                                          B   slow motion (Time.timeScale)
+                                                         R   rain over the arena (Play / Stop)
             
              The actions (Spell 1 ... Slow Motion) are defined in the project's input settings.
              </summary>
@@ -79,6 +80,12 @@
             <summary>
             Pause freezes an emitter's particles where they are; Resume lets them go on. Bursts still
             spawn while paused, so a spell cast into a frozen arena hangs in the air.
+            </summary>
+        </member>
+        <member name="M:ParticlesSample.SpellCaster.SetRaining(System.Boolean)">
+            <summary>
+            The rain prewarms the first time it plays, so it is already falling everywhere; after a Stop,
+            Play starts it again from the sky.
             </summary>
         </member>
         <member name="M:ParticlesSample.SpellCaster.SetSlowMotion(System.Boolean)">
@@ -102,8 +109,9 @@
         </member>
         <member name="T:ParticlesSample.LightFlash">
             <summary>
-            Drives the point light of a spell. Particles are unlit and cast no light, so the flash of an
-            explosion on the floor and the dummies comes from this light, timed with the burst.
+            Drives the point light of a spell. Most spell particles cast no light (Meteor Storm's particle
+            lights are the exception), so the flash of an explosion on the floor and the dummies comes
+            from this light, timed with the burst.
             The light stays disabled while it is dark, which costs nothing.
             </summary>
         </member>
@@ -149,10 +157,10 @@
         <member name="T:ParticlesSample.WindAffected">
              <summary>
              An emitter the arena's wind pushes. SpellCaster toggles the wind; this adds it to the
-             emitter's force over lifetime, on top of the force the emitter was built with.
+             emitter's acceleration, on top of the acceleration the emitter was built with.
             
-             The force bends where a particle ends up, and it is applied when the particle is born, so
-             smoke already in the air keeps its path and the new puffs lean over.
+             The acceleration bends where a particle ends up, and it is applied when the particle is born,
+             so smoke already in the air keeps its path and the new puffs lean over.
              </summary>
         </member>
         <member name="F:ParticlesSample.WindAffected.response">
@@ -257,6 +265,72 @@
              things (sparks, embers, smoke) turn fully to the camera.
              </summary>
         </member>
+        <member name="T:ParticlesSample.MeteorStormSpell">
+             <summary>
+             Meteor Storm: a burning sigil opens on the floor and a volley of meteors falls on it, one after
+             another, each leaving a fiery ribbon and a smoke trail and blowing debris, sparks and smoke out
+             of the floor where it lands.
+            
+             Shows: the script launches each meteor once - one Emit with a position, a velocity and a
+             lifetime on the rock (mesh particles) and on its glowing core - and the particles take it from
+             there: they fly the exact arc gravity gives them and die where they meet the floor (collision
+             kill). The core's collision event fires the whole impact through sub-emitters, with no script:
+             a flash that lights the arena (particle lights), flipbook fire drawn on cutout polygons, rock
+             debris that bounces and settles (mesh particles with a collision radius, raising dust at every
+             bounce through their own sub-emitter), sparks that draw their own path (trail render mode) and
+             bounce, embers that light the floor, normal-mapped smoke lit by the scene, rings and a
+             crater. The ribbon, the smoke and the sparks behind a meteor come from a slot entity the script
+             moves along the same arc: they spawn per metre travelled (rate over distance), so the trail
+             stays even at any speed. A closing ring marks each landing point for exactly the fall time
+             (Emit with a lifetime).
+             </summary>
+        </member>
+        <member name="F:ParticlesSample.MeteorStormSpell.spread">
+            <summary>Metres around the target the meteors land in; the last one lands on the target.</summary>
+        </member>
+        <member name="F:ParticlesSample.MeteorStormSpell.interval">
+            <summary>Seconds between two meteors.</summary>
+        </member>
+        <member name="F:ParticlesSample.MeteorStormSpell.fallSeconds">
+            <summary>Seconds a meteor falls.</summary>
+        </member>
+        <member name="F:ParticlesSample.MeteorStormSpell.skyHeight">
+            <summary>Metres above the floor the meteors start.</summary>
+        </member>
+        <member name="F:ParticlesSample.MeteorStormSpell.skySide">
+            <summary>Metres to the side (across the view) and behind the target the meteors start.</summary>
+        </member>
+        <member name="F:ParticlesSample.MeteorStormSpell.fallSound">
+            <summary>One meteor's incoming roar, made to last FallSoundSeconds: it is played faster or slower
+            so that it ends as the rock lands.</summary>
+        </member>
+        <member name="F:ParticlesSample.MeteorStormSpell.lastImpactSound">
+            <summary>The last meteor's heavier blow and longer rumble.</summary>
+        </member>
+        <member name="F:ParticlesSample.MeteorStormSpell.Gravity">
+            <summary>Gravity the particles fall with: standard gravity times the emitters' gravity scale of 1.</summary>
+        </member>
+        <member name="F:ParticlesSample.MeteorStormSpell.FallSoundSeconds">
+            <summary>Seconds the fall sound lasts at pitch 1, up to the moment of impact.</summary>
+        </member>
+        <member name="T:ParticlesSample.MeteorStormSpell.Slot">
+            <summary>One meteor's trail: an entity flown along the meteor's arc with three emitters on it.</summary>
+        </member>
+        <member name="M:ParticlesSample.MeteorStormSpell.GetSkyOffset">
+            <summary>
+            Where the meteors start, from the target: up, to the left of the view and behind the target,
+            so they cross the screen diagonally from any camera angle.
+            </summary>
+        </member>
+        <member name="M:ParticlesSample.MeteorStormSpell.Aftershock(Vector3)">
+            <summary>The last meteor's second shockwave, a moment after the first.</summary>
+        </member>
+        <member name="M:ParticlesSample.MeteorStormSpell.Land(Vector3,System.Boolean)">
+            <summary>
+            The impact's particles come from the core's collision through sub-emitters; the script only adds
+            what is not a particle (the shake, the sound, the dummies) and a bigger blast for the last meteor.
+            </summary>
+        </member>
         <member name="T:ParticlesSample.SpellInfo">
             <summary>What the HUD shows about a spell.</summary>
         </member>
@@ -268,7 +342,7 @@
         </member>
         <member name="T:ParticlesSample.Spell">
              <summary>
-             Base of the five spells. A spell's entity holds its effect as child entities, one emitter
+             Base of the six spells. A spell's entity holds its effect as child entities, one emitter
              each; casting moves the entity to the target and fires the emitters.
             
              The emitters come in three kinds, and the spells show all of them:
@@ -299,10 +373,11 @@
         <member name="M:ParticlesSample.Spell.GetLight(System.String)">
             <summary>The LightFlash on the child entity called <paramref name="childName"/>.</summary>
         </member>
-        <member name="M:ParticlesSample.Spell.PlaySound(System.String,System.Single)">
+        <member name="M:ParticlesSample.Spell.PlaySound(System.String,System.Single,System.Single)">
             <summary>
             Plays a spell sound on the listener (2D), so the caster's own spells land with full weight: a
             one-shot placed in the world falls off from 1 m, and the arena is over 10 m from the camera.
+            A <paramref name="pitch"/> above 1 plays the sound faster and higher, below 1 slower and lower.
             </summary>
         </member>
         <member name="M:ParticlesSample.Spell.GetEmitterIn(Unravel.Core.Entity,System.String)">

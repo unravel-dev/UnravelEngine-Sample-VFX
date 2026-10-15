@@ -3,8 +3,9 @@ using Unravel.Core;
 namespace ParticlesSample
 {
     /// <summary>
-    /// Drives the point light of a spell. Particles are unlit and cast no light, so the flash of an
-    /// explosion on the floor and the dummies comes from this light, timed with the burst.
+    /// Drives the point light of a spell. Most spell particles cast no light (Meteor Storm's particle
+    /// lights are the exception), so the flash of an explosion on the floor and the dummies comes
+    /// from this light, timed with the burst.
     /// The light stays disabled while it is dark, which costs nothing.
     /// </summary>
     [ScriptSourceFile]

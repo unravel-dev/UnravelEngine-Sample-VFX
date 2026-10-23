@@ -4,7 +4,8 @@ namespace ParticlesSample
 {
     /// <summary>
     /// Orbits the camera around the arena: right mouse drag turns, the wheel zooms. The left button
-    /// stays free for casting. Spells call Shake for impacts.
+    /// stays free for casting. On a touch screen one finger dragged turns and two fingers pinch to
+    /// zoom; a tap is left for casting. Spells call Shake for impacts.
     /// </summary>
     [ScriptSourceFile]
     public class OrbitCamera : ScriptComponent
@@ -17,6 +18,9 @@ namespace ParticlesSample
         public float sensitivity = 10.0f;
 
         public float zoomSpeed = 1.5f;
+
+        /// <summary>Degrees the camera turns for a finger dragged across the screen's height.</summary>
+        public float touchOrbitSpeed = 180.0f;
 
         /// <summary>The camera the arena is seen through, for spells that shake it.</summary>
         public static OrbitCamera Main;
@@ -63,7 +67,39 @@ namespace ParticlesSample
                 pitch = Mathf.Clamp(pitch - Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime, 8.0f, 75.0f);
             }
             distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * zoomSpeed, minDistance, maxDistance);
+            if (Input.touchCount == 1)
+            {
+                Orbit(Input.GetTouch(0));
+            }
+            else if (Input.touchCount >= 2)
+            {
+                Pinch(Input.GetTouch(0), Input.GetTouch(1));
+            }
             Apply();
+        }
+
+        /// <summary>A finger dragged turns the camera as the right mouse button does.</summary>
+        void Orbit(Touch touch)
+        {
+            if (touch.Phase != TouchPhase.Moved)
+            {
+                return;
+            }
+            float degreesPerPixel = touchOrbitSpeed / Mathf.Max(1.0f, Screen.height);
+            yaw += touch.DeltaPosition.x * degreesPerPixel;
+            pitch = Mathf.Clamp(pitch + touch.DeltaPosition.y * degreesPerPixel, 8.0f, 75.0f);
+        }
+
+        /// <summary>Two fingers spreading apart move the camera in by the ratio of their distances.</summary>
+        void Pinch(Touch first, Touch second)
+        {
+            float spread = (first.Position - second.Position).magnitude;
+            float lastSpread = (first.Position - first.DeltaPosition - (second.Position - second.DeltaPosition)).magnitude;
+            if (spread < 1.0f || lastSpread < 1.0f)
+            {
+                return;
+            }
+            distance = Mathf.Clamp(distance * lastSpread / spread, minDistance, maxDistance);
         }
 
         void Apply()

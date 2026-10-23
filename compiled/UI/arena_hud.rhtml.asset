@@ -6,10 +6,11 @@
 </head>
 <!--
     The arena HUD, a screen-space overlay. ArenaHud.cs binds the data model "arena" and refreshes
-    it a few times a second; the markup only says where each value goes. The HUD takes no input
-    (pointer-events: none), so every click reaches the game and casts.
+    it a few times a second; the markup only says where each value goes. Only the spell slots and
+    the switches take input (data-event-click calls the model's methods); every other click and tap
+    passes through the HUD (pointer-events: none) to the arena and casts.
 -->
-<body data-model="arena">
+<body data-model="arena" data-class-touch="touch">
     <div id="title" class="panel">
         <div class="heading">Spell Arena</div>
         <div class="subheading">Unravel particle effects sample</div>
@@ -18,11 +19,11 @@
     <div id="stats" class="panel">
         <div class="count">{{ particles }}</div>
         <div class="count-label">live particles in {{ emitters }} emitters</div>
-        <div class="switch" data-class-on="frozen"><span class="key">P</span><span class="label">Freeze particles</span><span class="state">{{ frozen ? 'ON' : 'off' }}</span></div>
-        <div class="switch" data-class-on="slowMotion"><span class="key">B</span><span class="label">Slow motion</span><span class="state">{{ slowMotion ? 'ON' : 'off' }}</span></div>
-        <div class="switch" data-class-on="windy"><span class="key">G</span><span class="label">Wind</span><span class="state">{{ windy ? 'ON' : 'off' }}</span></div>
-        <div class="switch" data-class-on="braziers"><span class="key">T</span><span class="label">Braziers</span><span class="state">{{ braziers ? 'lit' : 'out' }}</span></div>
-        <div class="switch" data-class-on="raining"><span class="key">R</span><span class="label">Rain</span><span class="state">{{ raining ? 'ON' : 'off' }}</span></div>
+        <div class="switch" data-class-on="frozen" data-event-click="ToggleFreeze()"><span class="key">P</span><span class="label">Freeze particles</span><span class="state">{{ frozen ? 'ON' : 'off' }}</span></div>
+        <div class="switch" data-class-on="slowMotion" data-event-click="ToggleSlowMotion()"><span class="key">B</span><span class="label">Slow motion</span><span class="state">{{ slowMotion ? 'ON' : 'off' }}</span></div>
+        <div class="switch" data-class-on="windy" data-event-click="ToggleWind()"><span class="key">G</span><span class="label">Wind</span><span class="state">{{ windy ? 'ON' : 'off' }}</span></div>
+        <div class="switch" data-class-on="braziers" data-event-click="ToggleBraziers()"><span class="key">T</span><span class="label">Braziers</span><span class="state">{{ braziers ? 'lit' : 'out' }}</span></div>
+        <div class="switch" data-class-on="raining" data-event-click="ToggleRain()"><span class="key">R</span><span class="label">Rain</span><span class="state">{{ raining ? 'ON' : 'off' }}</span></div>
     </div>
 
     <div id="controls" class="panel">
@@ -30,6 +31,13 @@
         <div class="control"><span class="key wide">Space</span>cast at a dummy</div>
         <div class="control"><span class="key wide">Right drag</span>orbit the camera</div>
         <div class="control"><span class="key wide">Wheel</span>zoom</div>
+        <div class="control"><span class="key wide">Click</span>a spell or a switch</div>
+    </div>
+
+    <div id="touch-controls" class="panel">
+        <div class="control"><span class="key wide">Tap</span>cast on the floor</div>
+        <div class="control"><span class="key wide">Drag</span>orbit the camera</div>
+        <div class="control"><span class="key wide">Pinch</span>zoom</div>
     </div>
 
     <div id="spellbook">
@@ -39,7 +47,8 @@
         </div>
         <div id="bar">
             <div class="slot" data-for="spell : spells" data-class-selected="spell.selected"
-                 data-style-border-color="spell.selected ? spell.accent : '#ffffff30'">
+                 data-style-border-color="spell.selected ? spell.accent : '#ffffff30'"
+                 data-event-click="SelectSpell(spell.key)">
                 <div class="slot-key" data-style-color="spell.accent">{{ spell.key }}</div>
                 <div class="slot-name">{{ spell.name }}</div>
             </div>

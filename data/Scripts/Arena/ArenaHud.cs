@@ -6,7 +6,12 @@ namespace ParticlesSample
     /// <summary>
     /// Drives app:/data/UI/arena_hud.rhtml through the data model "arena": the spell bar, the
     /// selected spell, and the live particle count with the state of the arena's switches.
-    /// It reads SpellCaster a few times a second and marks the whole model dirty.
+    /// It reads SpellCaster a few times a second and marks the whole model dirty. The spell slots
+    /// and the switches are buttons (data-event-click calls the model's methods).
+    ///
+    /// The stylesheet sizes everything in rem. On a touch screen the HUD takes its touch layout and
+    /// the root font size grows with the screen's density, so text stays readable and buttons stay
+    /// big enough for a finger.
     /// </summary>
     [ScriptSourceFile]
     public class ArenaHud : ScriptComponent
@@ -37,7 +42,60 @@ namespace ParticlesSample
             public bool slowMotion;
             public bool braziers = true;
             public bool raining;
+            /// <summary>The touch layout: touch hints instead of keys, taller switches.</summary>
+            public bool touch;
+            /// <summary>Reads the caster again right after a button changed it.</summary>
+            internal System.Action refresh;
+
+            /// <summary>data-event-click="SelectSpell(spell.key)" on a spell slot.</summary>
+            public void SelectSpell(int key)
+            {
+                SpellCaster.Main?.SelectSlot(key);
+                refresh?.Invoke();
+            }
+
+            public void ToggleFreeze()
+            {
+                var caster = SpellCaster.Main;
+                caster?.SetFrozen(!caster.IsFrozen());
+                refresh?.Invoke();
+            }
+
+            public void ToggleSlowMotion()
+            {
+                var caster = SpellCaster.Main;
+                caster?.SetSlowMotion(!caster.IsSlowMotion());
+                refresh?.Invoke();
+            }
+
+            public void ToggleWind()
+            {
+                var caster = SpellCaster.Main;
+                caster?.SetWindy(!caster.IsWindy());
+                refresh?.Invoke();
+            }
+
+            public void ToggleBraziers()
+            {
+                var caster = SpellCaster.Main;
+                caster?.SetBraziersLit(!caster.AreBraziersLit());
+                refresh?.Invoke();
+            }
+
+            public void ToggleRain()
+            {
+                var caster = SpellCaster.Main;
+                caster?.SetRaining(!caster.IsRaining());
+                refresh?.Invoke();
+            }
         }
+
+        /// <summary>The root font size the stylesheet's rem lengths are measured in (dp).</summary>
+        const float BaseFontSize = 16.0f;
+        /// <summary>Screen.dpi at 100 % display scaling.</summary>
+        const float BaseDpi = 96.0f;
+        /// <summary>A phone is held closer than a monitor, so its HUD needs less than the full density scale.</summary>
+        const float TouchViewingScale = 0.75f;
 
         readonly HudModel hud = new HudModel();
         UIDataModel model;
@@ -46,12 +104,30 @@ namespace ParticlesSample
         {
             // The name matches <body data-model="arena">.
             model = owner.GetComponent<UIDocumentComponent>().GetModel("arena");
+            hud.refresh = Refresh;
+            hud.touch = Input.touchSupported;
             model.Bind(hud);
         }
 
         public override void OnStart()
         {
+            if (hud.touch)
+            {
+                ScaleForTouch();
+            }
             InvokeRepeating(0.0f, refreshSeconds, Refresh);
+        }
+
+        /// <summary>Grows the root font size, and with it every rem length, with the screen's density.</summary>
+        void ScaleForTouch()
+        {
+            var root = owner.GetComponent<UIDocumentComponent>().document?.root;
+            if (root == null)
+            {
+                return;
+            }
+            float scale = Mathf.Max(1.0f, Screen.dpi / BaseDpi * TouchViewingScale);
+            root.style["font-size"] = (BaseFontSize * scale).ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "dp";
         }
 
         void Refresh()

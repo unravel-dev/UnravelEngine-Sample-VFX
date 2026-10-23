@@ -13,7 +13,9 @@ namespace ParticlesSample
     ///                                             B   slow motion (Time.timeScale)
     ///                                             R   rain over the arena (Play / Stop)
     ///
-    /// The actions (Spell 1 ... Slow Motion) are defined in the project's input settings.
+    /// On a touch screen a tap on the floor casts there; a finger that moves or a second finger is no
+    /// tap (the camera orbits and zooms). The HUD's spell slots and switches are buttons, for the mouse
+    /// and for touch. The actions (Spell 1 ... Slow Motion) are defined in the project's input settings.
     /// </summary>
     [ScriptSourceFile]
     public class SpellCaster : ScriptComponent
@@ -25,9 +27,14 @@ namespace ParticlesSample
         public float slowMotionScale = 0.25f;
         public string selectSound = "app:/data/Audio/select.wav";
         public string rainName = "Rain";
+        /// <summary>How far a finger may move and still tap (inches), and for how long it may touch (seconds).</summary>
+        public float tapSlopInches = 0.12f;
+        public float tapSeconds = 0.4f;
 
         /// <summary>The caster in the scene, for the HUD.</summary>
         public static SpellCaster Main;
+
+        const int NoFinger = -1;
 
         readonly List<Spell> spells = new List<Spell>();
         ParticleEmitterComponent[] emitters;
@@ -39,6 +46,9 @@ namespace ParticlesSample
         bool isSlowMotion;
         bool areBraziersLit = true;
         bool isRaining;
+        int tapFinger = NoFinger;
+        Vector2 tapStart;
+        float tapStartTime;
 
         public override void OnCreate()
         {
@@ -47,6 +57,9 @@ namespace ParticlesSample
 
         public override void OnStart()
         {
+            // Fingers are read as touches here: a tap casts, a drag orbits. As mouse clicks every drag
+            // would cast where it started.
+            Input.simulateMouseWithTouches = false;
             var cameraEntity = Scene.FindEntityByName(cameraName);
             view = cameraEntity ? cameraEntity.GetComponent<CameraComponent>() : null;
             spells.AddRange(Spell.All);
@@ -70,10 +83,11 @@ namespace ParticlesSample
                     Select(spell);
                 }
             }
-            if (Input.IsPressed("Mouse Left") && TryGetCursorTarget(out Vector3 target))
+            if (Input.IsPressed("Mouse Left") && TryGetFloorTarget(Input.mousePosition, out Vector3 target))
             {
                 Cast(target);
             }
+            UpdateTap();
             if (Input.IsPressed("Cast At Dummy") && TrainingDummy.All.Count > 0)
             {
                 var dummy = TrainingDummy.All[Random.Range(0, TrainingDummy.All.Count)];
@@ -101,6 +115,64 @@ namespace ParticlesSample
             }
         }
 
+        /// <summary>
+        /// A tap casts where the finger lifts: one finger, close to where it touched, soon after. A second
+        /// finger (a pinch) or a finger that moves too far (an orbit) is no tap. Fingers on the HUD's
+        /// buttons are the UI's and never show here.
+        /// </summary>
+        void UpdateTap()
+        {
+            if (Input.touchCount > 1)
+            {
+                tapFinger = NoFinger;
+                return;
+            }
+            float slop = tapSlopInches * Screen.dpi;
+            for (int index = 0; index < Input.touchCount; ++index)
+            {
+                Touch touch = Input.GetTouch(index);
+                switch (touch.Phase)
+                {
+                    case TouchPhase.Began:
+                        tapFinger = touch.FingerId;
+                        tapStart = touch.Position;
+                        tapStartTime = Time.realtimeSinceStartup;
+                        break;
+                    case TouchPhase.Moved:
+                    case TouchPhase.Stationary:
+                        if (touch.FingerId == tapFinger && (touch.Position - tapStart).magnitude > slop)
+                        {
+                            tapFinger = NoFinger;
+                        }
+                        break;
+                    case TouchPhase.Ended:
+                        bool isTap = touch.FingerId == tapFinger && (touch.Position - tapStart).magnitude <= slop &&
+                                     Time.realtimeSinceStartup - tapStartTime <= tapSeconds;
+                        if (isTap && TryGetFloorTarget(touch.Position, out Vector3 target))
+                        {
+                            Cast(target);
+                        }
+                        tapFinger = NoFinger;
+                        break;
+                    default:
+                        tapFinger = NoFinger;
+                        break;
+                }
+            }
+        }
+
+        /// <summary>Selects the spell of a slot (1-6), as its key does.</summary>
+        public void SelectSlot(int slot)
+        {
+            foreach (var spell in spells)
+            {
+                if (spell.GetInfo().slot == slot)
+                {
+                    Select(spell);
+                }
+            }
+        }
+
         public void Select(Spell spell)
         {
             if (spell == selected)
@@ -123,13 +195,13 @@ namespace ParticlesSample
         }
 
         /// <summary>
-        /// Where the cursor points on the arena floor: the camera's ray through the mouse, cut with
-        /// the floor's plane (y = 0). No collider is needed for a flat floor.
+        /// Where a screen point (the mouse, a finger) points on the arena floor: the camera's ray through
+        /// it, cut with the floor's plane (y = 0). No collider is needed for a flat floor.
         /// </summary>
-        bool TryGetCursorTarget(out Vector3 target)
+        bool TryGetFloorTarget(Vector2 screenPoint, out Vector3 target)
         {
             target = Vector3.zero;
-            if (view == null || !view.ScreenPointToRay(Input.mousePosition, out Ray ray) || ray.direction.y > -0.01f)
+            if (view == null || !view.ScreenPointToRay(screenPoint, out Ray ray) || ray.direction.y > -0.01f)
             {
                 return false;
             }

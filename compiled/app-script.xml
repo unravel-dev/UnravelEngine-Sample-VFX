@@ -28,17 +28,43 @@
             </summary>
         </member>
         <member name="T:ParticlesSample.ArenaHud">
-            <summary>
-            Drives app:/data/UI/arena_hud.rhtml through the data model "arena": the spell bar, the
-            selected spell, and the live particle count with the state of the arena's switches.
-            It reads SpellCaster a few times a second and marks the whole model dirty.
-            </summary>
+             <summary>
+             Drives app:/data/UI/arena_hud.rhtml through the data model "arena": the spell bar, the
+             selected spell, and the live particle count with the state of the arena's switches.
+             It reads SpellCaster a few times a second and marks the whole model dirty. The spell slots
+             and the switches are buttons (data-event-click calls the model's methods).
+            
+             The stylesheet sizes everything in rem. On a touch screen the HUD takes its touch layout and
+             the root font size grows with the screen's density, so text stays readable and buttons stay
+             big enough for a finger.
+             </summary>
         </member>
         <member name="T:ParticlesSample.ArenaHud.SpellSlot">
             <summary>One slot of the spell bar.</summary>
         </member>
         <member name="T:ParticlesSample.ArenaHud.HudModel">
             <summary>The object behind the data model "arena".</summary>
+        </member>
+        <member name="F:ParticlesSample.ArenaHud.HudModel.touch">
+            <summary>The touch layout: touch hints instead of keys, taller switches.</summary>
+        </member>
+        <member name="F:ParticlesSample.ArenaHud.HudModel.refresh">
+            <summary>Reads the caster again right after a button changed it.</summary>
+        </member>
+        <member name="M:ParticlesSample.ArenaHud.HudModel.SelectSpell(System.Int32)">
+            <summary>data-event-click="SelectSpell(spell.key)" on a spell slot.</summary>
+        </member>
+        <member name="F:ParticlesSample.ArenaHud.BaseFontSize">
+            <summary>The root font size the stylesheet's rem lengths are measured in (dp).</summary>
+        </member>
+        <member name="F:ParticlesSample.ArenaHud.BaseDpi">
+            <summary>Screen.dpi at 100 % display scaling.</summary>
+        </member>
+        <member name="F:ParticlesSample.ArenaHud.TouchViewingScale">
+            <summary>A phone is held closer than a monitor, so its HUD needs less than the full density scale.</summary>
+        </member>
+        <member name="M:ParticlesSample.ArenaHud.ScaleForTouch">
+            <summary>Grows the root font size, and with it every rem length, with the screen's density.</summary>
         </member>
         <member name="T:ParticlesSample.Brazier">
              <summary>
@@ -61,19 +87,34 @@
                                                          B   slow motion (Time.timeScale)
                                                          R   rain over the arena (Play / Stop)
             
-             The actions (Spell 1 ... Slow Motion) are defined in the project's input settings.
+             On a touch screen a tap on the floor casts there; a finger that moves or a second finger is no
+             tap (the camera orbits and zooms). The HUD's spell slots and switches are buttons, for the mouse
+             and for touch. The actions (Spell 1 ... Slow Motion) are defined in the project's input settings.
              </summary>
         </member>
         <member name="F:ParticlesSample.SpellCaster.arenaRadius">
             <summary>Casts land on the floor within this radius of the arena's centre.</summary>
         </member>
+        <member name="F:ParticlesSample.SpellCaster.tapSlopInches">
+            <summary>How far a finger may move and still tap (inches), and for how long it may touch (seconds).</summary>
+        </member>
         <member name="F:ParticlesSample.SpellCaster.Main">
             <summary>The caster in the scene, for the HUD.</summary>
         </member>
-        <member name="M:ParticlesSample.SpellCaster.TryGetCursorTarget(Vector3@)">
+        <member name="M:ParticlesSample.SpellCaster.UpdateTap">
             <summary>
-            Where the cursor points on the arena floor: the camera's ray through the mouse, cut with
-            the floor's plane (y = 0). No collider is needed for a flat floor.
+            A tap casts where the finger lifts: one finger, close to where it touched, soon after. A second
+            finger (a pinch) or a finger that moves too far (an orbit) is no tap. Fingers on the HUD's
+            buttons are the UI's and never show here.
+            </summary>
+        </member>
+        <member name="M:ParticlesSample.SpellCaster.SelectSlot(System.Int32)">
+            <summary>Selects the spell of a slot (1-6), as its key does.</summary>
+        </member>
+        <member name="M:ParticlesSample.SpellCaster.TryGetFloorTarget(Vector2,Vector3@)">
+            <summary>
+            Where a screen point (the mouse, a finger) points on the arena floor: the camera's ray through
+            it, cut with the floor's plane (y = 0). No collider is needed for a flat floor.
             </summary>
         </member>
         <member name="M:ParticlesSample.SpellCaster.SetFrozen(System.Boolean)">
@@ -127,17 +168,27 @@
         <member name="T:ParticlesSample.OrbitCamera">
             <summary>
             Orbits the camera around the arena: right mouse drag turns, the wheel zooms. The left button
-            stays free for casting. Spells call Shake for impacts.
+            stays free for casting. On a touch screen one finger dragged turns and two fingers pinch to
+            zoom; a tap is left for casting. Spells call Shake for impacts.
             </summary>
         </member>
         <member name="F:ParticlesSample.OrbitCamera.sensitivity">
             <summary>Degrees per unit of mouse movement, scaled by the frame time.</summary>
+        </member>
+        <member name="F:ParticlesSample.OrbitCamera.touchOrbitSpeed">
+            <summary>Degrees the camera turns for a finger dragged across the screen's height.</summary>
         </member>
         <member name="F:ParticlesSample.OrbitCamera.Main">
             <summary>The camera the arena is seen through, for spells that shake it.</summary>
         </member>
         <member name="M:ParticlesSample.OrbitCamera.Shake(System.Single,System.Single)">
             <summary>Shakes the view by up to <paramref name="strength"/> metres, calming over <paramref name="seconds"/>.</summary>
+        </member>
+        <member name="M:ParticlesSample.OrbitCamera.Orbit(Unravel.Core.Touch)">
+            <summary>A finger dragged turns the camera as the right mouse button does.</summary>
+        </member>
+        <member name="M:ParticlesSample.OrbitCamera.Pinch(Unravel.Core.Touch,Unravel.Core.Touch)">
+            <summary>Two fingers spreading apart move the camera in by the ratio of their distances.</summary>
         </member>
         <member name="T:ParticlesSample.Spinner">
              <summary>

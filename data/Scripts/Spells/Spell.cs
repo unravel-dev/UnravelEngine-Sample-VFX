@@ -27,6 +27,7 @@ namespace ParticlesSample
     /// The burst emitters simulate in world space, so moving the spell to the next target leaves
     /// the particles of the last cast where they were.
     /// </summary>
+    [ScriptSourceFile]
     public abstract class Spell : ScriptComponent
     {
         /// <summary>Every spell in the scene; SpellCaster picks from these by slot.</summary>

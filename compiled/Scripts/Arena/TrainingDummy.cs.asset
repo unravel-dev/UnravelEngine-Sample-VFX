@@ -87,7 +87,7 @@ namespace ParticlesSample
                     isGlowing = false;
                     foreach (var model in straw)
                     {
-                        model.ResetMaterial(0);
+                        model.GetMaterialInstance(0).RevertAll();
                     }
                 }
                 return;
@@ -103,8 +103,8 @@ namespace ParticlesSample
             }
             foreach (var model in straw)
             {
-                model.SetColor(MaterialProperty.EmissiveColor, glowColor, 0);
-                model.SetFloat(MaterialProperty.EmissiveIntensity, glow * 6.0f, 0);
+                model.GetMaterialInstance(0).emissiveColor = glowColor;
+                model.GetMaterialInstance(0).emissiveIntensity = glow * 6.0f;
             }
         }
 

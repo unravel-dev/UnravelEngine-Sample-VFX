@@ -1,8 +1,8 @@
 /*
  * Spell Arena HUD. Dark glass panels over the game; each spell brings its own accent colour
  * through the data model (data-style-color / data-style-border-color).
- * Lengths are in rem: 1rem is the body's font size, 16dp, which ArenaHud.cs grows with the
- * screen's density on a touch screen, so the whole HUD scales with it and its text stays sharp.
+ * Lengths are in rem, so the whole HUD scales with the body's font size and its text stays sharp:
+ * 16dp, which is the same apparent size on any screen, and on a short screen a share of its height.
  * RCSS reminders: colours with alpha as #rrggbbaa, borders take no style keyword.
  */
 
@@ -20,6 +20,14 @@ body {
 	color: #e8e4f4;
 	background-color: rgba(0, 0, 0, 0);
 	pointer-events: none;
+}
+
+#hud {
+	position: absolute;
+	left: 0dp;
+	top: 0dp;
+	right: 0dp;
+	bottom: 0dp;
 }
 
 .panel {
@@ -57,18 +65,22 @@ body {
 	width: 18.75rem;
 }
 
+#live {
+	text-align: right;
+	margin-bottom: 0.625rem;
+}
+
 .count {
+	display: block;
 	font-size: 2.5rem;
 	font-weight: bold;
 	color: #ffffff;
-	text-align: right;
 }
 
 .count-label {
+	display: block;
 	font-size: 0.8125rem;
 	color: #a79fc4;
-	text-align: right;
-	margin-bottom: 0.625rem;
 }
 
 /* A switch is a button: a click or a tap on its row turns it. Its state floats right, exactly as tall
@@ -212,9 +224,11 @@ body {
 
 /* ---------- touch screens ---------- */
 
-/* No keyboard: touch hints take the title's place, switches lose their keys and grow for a finger. */
+/* No keyboard: touch hints take the title's place, switches and slots lose their keys. */
 body.touch #title,
-body.touch #controls {
+body.touch #controls,
+body.touch .switch .key,
+body.touch .slot-key {
 	display: none;
 }
 
@@ -231,10 +245,146 @@ body.touch .switch {
 	line-height: 2.5rem;
 }
 
-body.touch .switch .key {
-	display: none;
+body.touch .switch .label {
+	margin-left: 0dp;
 }
 
-body.touch .switch .label {
-	margin-left: 0;
+/* ---------- short screens: a phone in landscape ---------- */
+
+/* About 384 dp tall. One strip of switches along the top and one row of spells along the bottom leave the
+   arena in view. A switch shows its state by its colour, a slot its spell by its name. The layout needs
+   46 x 26 rem between the margins: 1rem is 1/26 of the height, or on a narrower shape 1/46 of the width
+   between the margins. The side margins keep it clear of a camera cutout, on either side of a turned phone. */
+@media (max-height: 500dp) {
+	body {
+		font-size: 3.846vh;
+	}
+
+	#hud {
+		left: 4.5vw;
+		right: 4.5vw;
+	}
+
+	#hud #title,
+	#hud #controls,
+	#hud .long,
+	#hud .switch .key,
+	#hud .switch .state,
+	#hud .slot-key,
+	#hud .spell-name {
+		display: none;
+	}
+
+	#hud #stats {
+		top: 0.5rem;
+		left: 0dp;
+		right: 0dp;
+		width: auto;
+		padding: 0dp;
+		background-color: rgba(0, 0, 0, 0);
+		border-width: 0dp;
+	}
+
+	#hud #live {
+		position: absolute;
+		left: 0dp;
+		top: 0dp;
+		margin: 0dp;
+		padding: 0.25rem 0.625rem;
+		text-align: left;
+		background-color: #0b0a14c8;
+		border-radius: 0.5rem;
+	}
+
+	#hud .count {
+		display: inline;
+		font-size: 1.25rem;
+	}
+
+	#hud .count-label {
+		display: inline;
+		margin-left: 0.25rem;
+	}
+
+	#hud #switches {
+		position: absolute;
+		right: 0dp;
+		top: 0dp;
+		text-align: right;
+	}
+
+	#hud .switch {
+		display: inline-block;
+		clear: none;
+		height: 3rem;
+		line-height: 3rem;
+		margin-left: 0.25rem;
+		padding: 0dp 0.75rem;
+		font-size: 0.875rem;
+		background-color: #0b0a14c8;
+		border-radius: 0.5rem;
+	}
+
+	#hud .switch.on {
+		background-color: #5a4a1ee6;
+		color: #ffd77a;
+	}
+
+	#hud .switch .label {
+		margin-left: 0dp;
+	}
+
+	#hud #touch-controls {
+		top: 2.75rem;
+		left: 0dp;
+		padding: 0.125rem 0.625rem;
+		background-color: rgba(0, 0, 0, 0);
+		border-width: 0dp;
+	}
+
+	#hud .control {
+		height: 1.5rem;
+		line-height: 1.5rem;
+		font-size: 0.75rem;
+	}
+
+	#hud .key.wide {
+		width: 3rem;
+		height: 1.25rem;
+		line-height: 1.25rem;
+		margin-right: 0.375rem;
+		font-size: 0.6875rem;
+	}
+
+	#hud #spellbook {
+		bottom: 0.5rem;
+	}
+
+	#hud #details {
+		width: auto;
+		margin-bottom: 0.25rem;
+		padding: 0.125rem 0.625rem;
+		border-width: 0dp;
+	}
+
+	#hud .spell-description {
+		font-size: 0.8125rem;
+	}
+
+	#hud .slot {
+		width: 7.25rem;
+		height: 3.25rem;
+		margin: 0dp 0.125rem;
+		padding-top: 0dp;
+	}
+
+	#hud .slot-name {
+		line-height: 3rem;
+	}
+}
+
+@media (max-height: 500dp) and (max-aspect-ratio: 194/100) {
+	body {
+		font-size: 1.978vw;
+	}
 }

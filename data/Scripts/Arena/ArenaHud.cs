@@ -9,9 +9,8 @@ namespace ParticlesSample
     /// It reads SpellCaster a few times a second and marks the whole model dirty. The spell slots
     /// and the switches are buttons (data-event-click calls the model's methods).
     ///
-    /// The stylesheet sizes everything in rem. On a touch screen the HUD takes its touch layout and
-    /// the root font size grows with the screen's density, so text stays readable and buttons stay
-    /// big enough for a finger.
+    /// The stylesheet does all the sizing: here the HUD only says it is on a touch screen, which a
+    /// stylesheet cannot find out by itself.
     /// </summary>
     [ScriptSourceFile]
     public class ArenaHud : ScriptComponent
@@ -42,7 +41,7 @@ namespace ParticlesSample
             public bool slowMotion;
             public bool braziers = true;
             public bool raining;
-            /// <summary>The touch layout: touch hints instead of keys, taller switches.</summary>
+            /// <summary>The touch layout: sized by the screen, touch hints instead of keys.</summary>
             public bool touch;
             /// <summary>Reads the caster again right after a button changed it.</summary>
             internal System.Action refresh;
@@ -90,13 +89,6 @@ namespace ParticlesSample
             }
         }
 
-        /// <summary>The root font size the stylesheet's rem lengths are measured in (dp).</summary>
-        const float BaseFontSize = 16.0f;
-        /// <summary>Screen.dpi at 100 % display scaling.</summary>
-        const float BaseDpi = 96.0f;
-        /// <summary>A phone is held closer than a monitor, so its HUD needs less than the full density scale.</summary>
-        const float TouchViewingScale = 0.75f;
-
         readonly HudModel hud = new HudModel();
         UIDataModel model;
 
@@ -111,23 +103,7 @@ namespace ParticlesSample
 
         public override void OnStart()
         {
-            if (hud.touch)
-            {
-                ScaleForTouch();
-            }
             InvokeRepeating(0.0f, refreshSeconds, Refresh);
-        }
-
-        /// <summary>Grows the root font size, and with it every rem length, with the screen's density.</summary>
-        void ScaleForTouch()
-        {
-            var root = owner.GetComponent<UIDocumentComponent>().document?.root;
-            if (root == null)
-            {
-                return;
-            }
-            float scale = Mathf.Max(1.0f, Screen.dpi / BaseDpi * TouchViewingScale);
-            root.style["font-size"] = (BaseFontSize * scale).ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "dp";
         }
 
         void Refresh()

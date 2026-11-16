@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "title": "Spell Arena",
+  "topic": "Visual effects",
+  "description": "A night arena where spells play out: lightning, fireball, frost nova, arcane vortex and holy light, with braziers, embers, mist, fireflies and a meteor storm. Shows GPU particles with sub-emitters, ribbons, soft and lit particles, and the scripts that cast them.",
+  "tags": [
+    "Particles",
+    "VFX",
+    "C# Scripts"
+  ],
+  "icon": "auto-fix",
+  "order": 50,
+  "added": "2026-10-13",
+  "thumbnail": "thumbnail.jpg"
+}

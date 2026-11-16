@@ -9,7 +9,7 @@ namespace ParticlesSample
     ///
     ///   1-6          pick a spell                 P   freeze every particle (Pause / Resume)
     ///   Left click   cast at the cursor           T   put the braziers out and light them (Stop / Play)
-    ///   Space        cast at a random dummy       G   wind on the smoke and the rain (force over lifetime)
+    ///   Space        cast at a random dummy       G   wind on the smoke and the rain (emitter acceleration)
     ///                                             B   slow motion (Time.timeScale)
     ///                                             R   rain over the arena (Play / Stop)
     ///
